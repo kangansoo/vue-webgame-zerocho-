@@ -13,10 +13,13 @@
     </div>
     <WordRelay startWord="초밥"/>
     <WordRelay startWord="자장면"/>
+    <NumberBaseball />
+    
   </div>
 </template>
 <script>
 import WordRelay from './components/WordRelay.vue';
+import NumberBaseball from './components/NumberBaseball.vue';
 export default {
   name: 'App', //vue 인스턴스
   data() {
@@ -47,7 +50,8 @@ export default {
     },
   },
   components: {
-    WordRelay
+    WordRelay,
+    NumberBaseball
   }
 }
 </script>
