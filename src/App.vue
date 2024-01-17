@@ -11,32 +11,20 @@
       </form>
       <div>{{ result }}</div>
     </div>
-    <br />
-    <div>
-      <h1>끝말잇기</h1>
-      <h2>{{ word }}</h2>
-      <form @submit="onSubmitForm2">
-        <input type="text" ref="answer2" v-model="value2" />
-        <button type="submit">입력</button>
-      </form>
-      <div>{{ result2 }}</div>
-    </div>
+    <WordRelay startWord="초밥"/>
+    <WordRelay startWord="자장면"/>
   </div>
 </template>
-
 <script>
-
+import WordRelay from './components/WordRelay.vue';
 export default {
-  name: 'App',
+  name: 'App', //vue 인스턴스
   data() {
     return {
       first: Math.ceil(Math.random() * 9),
       second: Math.ceil(Math.random() * 9),
       value: '',
       result: '',
-      word: '제로초',
-      result2: '',
-      value2: '',
     }
   },
   methods: {
@@ -57,21 +45,9 @@ export default {
         this.$refs.answer.focus();
       }
     },
-    onSubmitForm2(e){
-      e.preventDefault();
-      if (this.word[this.word.length - 1] === this.value2[0]) {
-        this.result2 = '딩동댕';
-        this.word = this.value2;
-        this.value2 = '';
-        this.$refs.answer2.focus();
-      }else{
-        this.result2 = "땡";
-        this.value2 = '';
-        this.$refs.answer2.focus();
-      }
-    }
   },
   components: {
+    WordRelay
   }
 }
 </script>
