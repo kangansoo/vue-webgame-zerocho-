@@ -31,9 +31,9 @@ export default {
     data() {
         return {
             answer: getNumbers(), // ex) [1, 4, 2, 4] 배열 형식
-            tries: [],
-            value: '',
-            result: '',
+            tries: [], //시도
+            value: '', //입력값
+            result: '', //결과
         }
     },
     methods: {
@@ -50,7 +50,7 @@ export default {
                 this.tries = [];
                 this.$refs.answer.focus();
             } else {
-                if (this.tries.length > 9){
+                if (this.tries.length > 9){ //실패
                     this.result = `10번 초과하여 실패! 정답은 ${this.answer.join(',')}입니다.`
                     alert('게임을 다시 실행합니다.')
                     this.value = '';
