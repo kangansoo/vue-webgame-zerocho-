@@ -15,6 +15,7 @@
     <WordRelay startWord="자장면"/>
     <NumberBaseball />
     <ResponseCheck />
+    <RockScissorsPaper />
     
   </div>
 </template>
@@ -22,6 +23,7 @@
 import WordRelay from './components/WordRelay.vue';
 import NumberBaseball from './components/NumberBaseball.vue';
 import ResponseCheck from './components/ResponseCheck.vue';
+import RockScissorsPaper from './components/RockScissorsPaper.vue';
 export default {
   name: 'App', //vue 인스턴스
   data() {
@@ -55,6 +57,7 @@ export default {
     WordRelay,
     NumberBaseball,
     ResponseCheck,
+    RockScissorsPaper,
   }
 }
 </script>
