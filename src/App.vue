@@ -16,6 +16,7 @@
     <NumberBaseball />
     <ResponseCheck />
     <RockScissorsPaper />
+    <LottoGenerator />
     
   </div>
 </template>
@@ -24,6 +25,7 @@ import WordRelay from './components/WordRelay.vue';
 import NumberBaseball from './components/NumberBaseball.vue';
 import ResponseCheck from './components/ResponseCheck.vue';
 import RockScissorsPaper from './components/RockScissorsPaper.vue';
+import LottoGenerator from './components/LottoGenerator.vue';
 export default {
   name: 'App', //vue 인스턴스
   data() {
@@ -58,6 +60,7 @@ export default {
     NumberBaseball,
     ResponseCheck,
     RockScissorsPaper,
+    LottoGenerator,
   }
 }
 </script>
